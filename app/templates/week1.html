@@ -1,0 +1,60 @@
+{# Первая неделя #}
+{% elif week2 <= week %}
+<div class="row">
+ <div class="col-md-2 col-sm-2 col-md-offset-5 col-sm-offset-5">
+        <h3>1-я неделя</h3></div></div>
+{% if week2 <= day %}
+        <div class="row">
+        <div class="col-md-5 col-md-offset-3 col-sm-12">
+         <ul class="list-group-flush">
+        {% for job in jobs[0] %}
+        <li class="list-group-item"><b>{{job.name}}:</b><span class="badge">{{ job.body  }}</span></li>
+
+         {% endfor %}
+        </ul>
+</div></div>
+{% endif %}
+{% if week2 <= day*2 and week2 > day %}
+        <div class="row">
+        <div class="col-md-5 col-md-offset-3 col-sm-12">
+        <ul class="list-group-flush">
+        {% for odd_day in odd_days %}
+        <li class="list-group-item"><b>{{odd_day.name}}:</b><span class="badge">{{ odd_day.quantity  }}</span></li>
+        {% endfor %}
+        </ul>
+</div></div>
+{% endif %}
+{% if week2 <= day*3 and week2 > day*2 %}
+        <div class="row">
+        <div class="col-md-5 col-md-offset-3 col-sm-12">
+         <ul class="list-group-flush">
+        {% for job in jobs[1] %}
+        <li class="list-group-item"><b>{{job.name}}:</b><span class="badge">{{ job.body  }}</span></li>
+
+         {% endfor %}
+        </ul>
+</div></div>
+{% endif %}
+{% if week2 <= day*4 and week2 > day*3 %}
+        <div class="row">
+        <div class="col-md-5 col-md-offset-3 col-sm-12">
+        <ul class="list-group-flush">
+        {% for odd_day in odd_days %}
+        <li class="list-group-item"><b>{{odd_day.name}}:</b><span class="badge">{{ odd_day.quantity  }}</span></li>
+        {% endfor %}
+        </ul>
+</div></div>
+{% endif %}
+{% if week2 <= day*5 and week2 > day*4 %}
+        <div class="row">
+        <div class="col-md-5 col-md-offset-3 col-sm-12">
+         <ul class="list-group-flush">
+        {% for job in jobs[1] %}
+        <li class="list-group-item"><b>{{job.name}}:</b><span class="badge">{{ job.body  }}</span></li>
+
+         {% endfor %}
+        </ul>
+</div></div>
+{% endif %}
+{% endif %}
+

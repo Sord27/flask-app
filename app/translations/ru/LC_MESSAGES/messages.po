@@ -1,0 +1,365 @@
+# Russian translations for PROJECT.
+# Copyright (C) 2018 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-07-26 18:23+0000\n"
+"PO-Revision-Date: 2018-07-26 10:15+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ru\n"
+"Language-Team: ru <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+
+#: app/__init__.py:21
+msgid "Please log in to access this page."
+msgstr "Пожалуйста войдите."
+
+#: app/translate.py:10
+msgid "Error: the translation service is not configured."
+msgstr ""
+
+#: app/translate.py:18
+msgid "Error: the translation service failed."
+msgstr ""
+
+#: app/auth/email.py:8
+msgid "[Microblog] Reset Your Password"
+msgstr ""
+
+#: app/auth/forms.py:9 app/auth/forms.py:16 app/main/forms.py:10
+msgid "Username"
+msgstr "Имя"
+
+#: app/auth/forms.py:10 app/auth/forms.py:18 app/auth/forms.py:41
+msgid "Password"
+msgstr "Пароль"
+
+#: app/auth/forms.py:11
+msgid "Remember Me"
+msgstr "Запомнить"
+
+#: app/auth/forms.py:12 app/auth/routes.py:28
+msgid "Sign In"
+msgstr "Войти"
+
+#: app/auth/forms.py:17 app/auth/forms.py:36
+msgid "Email"
+msgstr ""
+
+#: app/auth/forms.py:20 app/auth/forms.py:43
+msgid "Repeat Password"
+msgstr ""
+
+#: app/auth/forms.py:22 app/auth/routes.py:49
+#: app/templates/auth/register.html:5
+msgid "Register"
+msgstr "Регисттрация"
+
+#: app/auth/forms.py:27 app/main/forms.py:27
+msgid "Please use a different username."
+msgstr "Используй другое имя"
+
+#: app/auth/forms.py:32
+msgid "Please use a different email address."
+msgstr "Используй другой email адресс"
+
+#: app/auth/forms.py:37 app/auth/forms.py:45
+msgid "Request Password Reset"
+msgstr "Сбросить пароль"
+
+#: app/auth/routes.py:21
+msgid "Invalid username or password"
+msgstr ""
+
+#: app/auth/routes.py:47
+msgid "Congratulations, you are now a registered user!"
+msgstr ""
+
+#: app/auth/routes.py:63
+msgid "Check your email for the instructions to reset your password"
+msgstr ""
+
+#: app/auth/routes.py:66 app/templates/auth/reset_password_request.html:5
+msgid "Reset Password"
+msgstr ""
+
+#: app/auth/routes.py:80
+msgid "Your password has been reset."
+msgstr ""
+
+#: app/main/forms.py:11
+msgid "About me"
+msgstr ""
+
+#: app/main/forms.py:17 app/main/forms.py:37 app/main/forms.py:55
+msgid "Submit"
+msgstr ""
+
+#: app/main/forms.py:31
+msgid "Старт"
+msgstr ""
+
+#: app/main/forms.py:36
+msgid "Say something"
+msgstr ""
+
+#: app/main/forms.py:42 app/main/routes.py:274
+msgid "Search"
+msgstr ""
+
+#: app/main/forms.py:53
+msgid "Message"
+msgstr ""
+
+#: app/main/routes.py:37
+msgid "Your post is now live!"
+msgstr ""
+
+#: app/main/routes.py:46
+msgid "Home"
+msgstr ""
+
+#: app/main/routes.py:61
+msgid "Explore"
+msgstr ""
+
+#: app/main/routes.py:136
+msgid "Tasks"
+msgstr ""
+
+#: app/main/routes.py:195
+msgid "Your changes have been saved."
+msgstr ""
+
+#: app/main/routes.py:203 app/templates/edit_profile.html:6
+msgid "Edit Profile"
+msgstr ""
+
+#: app/main/routes.py:214
+msgid "Тренировка начнется в указанное время. Следуй инструкциям ниже."
+msgstr ""
+
+#: app/main/routes.py:218 app/templates/base.html:43
+msgid "Start"
+msgstr ""
+
+#: app/main/routes.py:227 app/main/routes.py:243
+#, python-format
+msgid "User %(username)s not found."
+msgstr ""
+
+#: app/main/routes.py:230
+msgid "You cannot follow yourself!"
+msgstr ""
+
+#: app/main/routes.py:234
+#, python-format
+msgid "You are following %(username)s!"
+msgstr ""
+
+#: app/main/routes.py:246
+msgid "You cannot unfollow yourself!"
+msgstr ""
+
+#: app/main/routes.py:250
+#, python-format
+msgid "You are not following %(username)s."
+msgstr ""
+
+#: app/main/routes.py:289
+msgid "Your message has been sent."
+msgstr ""
+
+#: app/main/routes.py:291
+msgid "Send Message"
+msgstr ""
+
+#: app/main/routes.py:317
+msgid "An export task is currently in progress"
+msgstr ""
+
+#: app/main/routes.py:319
+msgid "Exporting posts..."
+msgstr ""
+
+#: app/templates/_post.html:16
+#, python-format
+msgid "%(username)s said %(when)s"
+msgstr ""
+
+#: app/templates/_post.html:27
+msgid "Translate"
+msgstr ""
+
+#: app/templates/_tasks.html:7
+#, python-format
+msgid "Привет, %(username)s!"
+msgstr ""
+
+#: app/templates/_tasks.html:32
+msgid "th day"
+msgstr "й день"
+
+#: app/templates/base.html:4
+msgid "Welcome to RYBN"
+msgstr ""
+
+#: app/templates/base.html:40
+msgid "Login"
+msgstr ""
+
+#: app/templates/base.html:42
+msgid "Training"
+msgstr ""
+
+#: app/templates/base.html:54
+msgid "Profile"
+msgstr ""
+
+#: app/templates/base.html:55
+msgid "Logout"
+msgstr ""
+
+#: app/templates/base.html:117
+msgid "Error: Could not contact server."
+msgstr ""
+
+#: app/templates/index.html:5
+#, python-format
+msgid "Hi, %(username)s!"
+msgstr ""
+
+#: app/templates/index.html:19
+msgid "Newer posts"
+msgstr ""
+
+#: app/templates/index.html:24
+msgid "Older posts"
+msgstr ""
+
+#: app/templates/messages.html:4
+msgid "Messages"
+msgstr ""
+
+#: app/templates/messages.html:12
+msgid "Newer messages"
+msgstr ""
+
+#: app/templates/messages.html:17
+msgid "Older messages"
+msgstr ""
+
+#: app/templates/search.html:4
+msgid "Search Results"
+msgstr ""
+
+#: app/templates/search.html:12
+msgid "Previous results"
+msgstr ""
+
+#: app/templates/search.html:17
+msgid "Next results"
+msgstr ""
+
+#: app/templates/send_message.html:5
+#, python-format
+msgid "Send Message to %(recipient)s"
+msgstr ""
+
+#: app/templates/start.html:6
+msgid "Restyling Your Body Now"
+msgstr ""
+
+#: app/templates/user.html:15 app/templates/user.html:18
+#: app/templates/user_popup.html:9
+msgid "Last seen on"
+msgstr ""
+
+#: app/templates/user.html:24
+msgid "Edit your profile"
+msgstr ""
+
+#: app/templates/user.html:29 app/templates/user_popup.html:14
+msgid "Follow"
+msgstr ""
+
+#: app/templates/user.html:31 app/templates/user_popup.html:16
+msgid "Unfollow"
+msgstr ""
+
+#: app/templates/user.html:34
+msgid "Send private message"
+msgstr ""
+
+#: app/templates/user_popup.html:11
+#, python-format
+msgid "%(count)d followers"
+msgstr ""
+
+#: app/templates/user_popup.html:11
+#, python-format
+msgid "%(count)d following"
+msgstr ""
+
+#: app/templates/auth/login.html:7
+msgid "Регистрация"
+msgstr ""
+
+#: app/templates/auth/login.html:14
+msgid "New User?"
+msgstr ""
+
+#: app/templates/auth/login.html:14
+msgid "Click to Register!"
+msgstr ""
+
+#: app/templates/auth/login.html:16
+msgid "Forgot Your Password?"
+msgstr ""
+
+#: app/templates/auth/login.html:17
+msgid "Click to Reset It"
+msgstr ""
+
+#: app/templates/auth/reset_password.html:5
+msgid "Reset Your Password"
+msgstr ""
+
+#: app/templates/email/reset_password.html:1
+msgid "Dear"
+msgstr "Уважаемый"
+
+#: app/templates/errors/404.html:4
+msgid "Not Found"
+msgstr ""
+
+#: app/templates/errors/404.html:5 app/templates/errors/500.html:6
+msgid "Back"
+msgstr ""
+
+#: app/templates/errors/500.html:4
+msgid "An unexpected error has occurred"
+msgstr ""
+
+#: app/templates/errors/500.html:5
+msgid "The administrator has been notified. Sorry for the inconvenience!"
+msgstr ""
+
+#~ msgid "Тренировка"
+#~ msgstr ""
+
+#~ msgid "Профиль"
+#~ msgstr ""
+
+#~ msgid "Выйти"
+#~ msgstr ""
+

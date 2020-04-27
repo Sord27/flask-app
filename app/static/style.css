@@ -1,0 +1,7 @@
+.backgroundimg {
+  background-image: url('https://i.pinimg.com/originals/2e/af/00/2eaf001feecbc4e808247c05190354ae.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+}

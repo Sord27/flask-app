@@ -1,0 +1,254 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+<div class="row">
+<div class="col-md-12">
+        <h1>{{ _('Привет, %(username)s!', username=current_user.username) }}</h1>
+        
+        <span style="color:grey">Приветствую тебя в тренировочном онлайн приложении. Программа рассчитана на 10 недель (70 дней). Каждый день будут менятся упражнения.</span>
+        <span style="color:grey">Сегодня тебе необходимо выполнить следующее:</span>
+</div>
+</div>
+<hr>
+<div class="row">
+<div class="col-md-6 col-md-offset-3">
+{# Основная часть #}
+{% if week2 < 0 %}
+<h3 class="text-center">Тренировка начнется {{ moment(start_job).fromNow() }}</h3>
+{% endif %}
+{% if diff >= 1 and diff <= 70 %}
+ <h3 class="text-center">{{ week  }}-я неделя</h3>
+ <div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title text-center">
+        <a data-toggle="collapse" href="#collapse3">{{ week2+1 }}-й день</a>
+      </h4>
+    </div>
+    <div id="collapse3" class="panel-collapse collapse in">
+      <ul class="list-group">
+{% endif %}
+
+      {% if week2 < 0 %}
+      <hr>
+{# Лучшее решение #}
+
+{# Первая неделя #}
+         {% elif diff >= 1 and diff < 6  %}
+         {% if diff % 2 == 0  %}
+         {% for job in jobs[0] %}
+           <li class="list-group-item">{{job.name}}: <span class="badge">{{job.body}}</span></li>
+           {% endfor %}
+           {% endif %}
+         {% if diff % 2 != 0  %}
+           {% for odd_day in odd_days %}
+           <li class="list-group-item"><b>{{odd_day.name}}:</b><span class="badge">{{ odd_day.quantity  }}</span></li>
+           {% endfor %}
+           {% endif %}
+         {% elif diff == 6 or  diff == 7  %}
+           <li class="list-group-item">Сегодня отдых. Пускай мышцы восстановятся.</li>
+
+{# Вторая неделя #}
+       {% elif diff >= 8 and diff < 13  %}
+         {% if diff % 2 == 0  %}
+         {% for job in jobs[1] %}
+           <li class="list-group-item">{{job.name}}: <span class="badge">{{job.body}}</span></li>
+           {% endfor %}
+           {% endif %}
+         {% if diff % 2 != 0  %}
+           {% for odd_day in odd_days %}
+           <li class="list-group-item"><b>{{odd_day.name}}:</b><span class="badge">{{ odd_day.quantity  }}</span></li>
+           {% endfor %}
+           {% endif %}
+         {% elif diff == 14 or  diff == 13  %}
+           <li class="list-group-item">Сегодня отдых. Пускай мышцы восстановятся.</li>          
+
+{# Третья неделя #}
+       {% elif diff >= 15 and diff < 20  %}
+         {% if diff % 2 == 0  %}
+         {% for job in jobs[2] %}
+           <li class="list-group-item">{{job.name}}: <span class="badge">{{job.body}}</span></li>
+           {% endfor %}
+           {% endif %}
+         {% if diff % 2 != 0  %}
+           {% for odd_day in odd_days %}
+           <li class="list-group-item"><b>{{odd_day.name}}:</b><span class="badge">{{ odd_day.quantity  }}</span></li>
+           {% endfor %}
+           {% endif %}
+         {% elif diff == 20 or  diff == 21  %}
+           <li class="list-group-item">Сегодня отдых. Пускай мышцы восстановятся.</li>
+
+{# 4-я неделя #}
+       {% elif diff >= 22 and diff < 27  %}
+         {% if diff % 2 == 0  %}
+         {% for job in jobs[3] %}
+           <li class="list-group-item">{{job.name}}: <span class="badge">{{job.body}}</span></li>
+           {% endfor %}
+           {% endif %}
+         {% if diff % 2 != 0  %}
+           {% for odd_day in odd_days %}
+           <li class="list-group-item"><b>{{odd_day.name}}:</b><span class="badge">{{ odd_day.quantity  }}</span></li>
+           {% endfor %}
+           {% endif %}
+         {% elif diff == 27 or  diff == 28  %}
+           <li class="list-group-item">Сегодня отдых. Пускай мышцы восстановятся.</li>
+
+{# 5-я неделя #}
+       {% elif diff >= 29 and diff < 34  %}
+         {% if diff % 2 == 0  %}
+         {% for job in jobs[4] %}
+           <li class="list-group-item">{{job.name}}: <span class="badge">{{job.body}}</span></li>
+           {% endfor %}
+           {% endif %}
+         {% if diff % 2 != 0  %}
+           {% for odd_day in odd_days %}
+           <li class="list-group-item"><b>{{odd_day.name}}:</b><span class="badge">{{ odd_day.quantity  }}</span></li>
+           {% endfor %}
+           {% endif %}
+         {% elif diff == 34 or  diff == 35  %}
+           <li class="list-group-item">Сегодня отдых. Пускай мышцы восстановятся.</li>
+
+{# 6-я неделя #}
+       {% elif diff >= 36 and diff < 41  %}
+         {% if diff % 2 == 0  %}
+         {% for job in jobs[5] %}
+           <li class="list-group-item">{{job.name}}: <span class="badge">{{job.body}}</span></li>
+           {% endfor %}
+           {% endif %}
+         {% if diff % 2 != 0  %}
+           {% for odd_day in odd_days %}
+           <li class="list-group-item"><b>{{odd_day.name}}:</b><span class="badge">{{ odd_day.quantity  }}</span></li>
+           {% endfor %}
+           {% endif %}
+         {% elif diff == 41 or  diff == 42  %}
+           <li class="list-group-item">Сегодня отдых. Пускай мышцы восстановятся.</li>
+
+{# 7-я неделя #}
+       {% elif diff >= 43 and diff < 48  %}
+         {% if diff % 2 == 0  %}
+         {% for job in jobs[6] %}
+           <li class="list-group-item">{{job.name}}: <span class="badge">{{job.body}}</span></li>
+           {% endfor %}
+           {% endif %}
+         {% if diff % 2 != 0  %}
+           {% for odd_day in odd_days %}
+           <li class="list-group-item"><b>{{odd_day.name}}:</b><span class="badge">{{ odd_day.quantity  }}</span></li>
+           {% endfor %}
+           {% endif %}
+         {% elif diff == 48 or  diff == 49  %}
+           <li class="list-group-item">Сегодня отдых. Пускай мышцы восстановятся.</li> 
+
+{# 8-я неделя #}
+       {% elif diff >= 50 and diff < 55  %}
+         {% if diff % 2 == 0  %}
+         {% for job in jobs[7] %}
+           <li class="list-group-item">{{job.name}}: <span class="badge">{{job.body}}</span></li>
+           {% endfor %}
+           {% endif %}
+         {% if diff % 2 != 0  %}
+           {% for odd_day in odd_days %}
+           <li class="list-group-item"><b>{{odd_day.name}}:</b><span class="badge">{{ odd_day.quantity  }}</span></li>
+           {% endfor %}
+           {% endif %}
+         {% elif diff == 55 or  diff == 56  %}
+           <li class="list-group-item">Сегодня отдых. Пускай мышцы восстановятся.</li>
+
+{# 9-я неделя #}
+       {% elif diff >= 57 and diff < 62  %}
+         {% if diff % 2 == 0  %}
+         {% for job in jobs[8] %}
+           <li class="list-group-item">{{job.name}}: <span class="badge">{{job.body}}</span></li>
+           {% endfor %}
+           {% endif %}
+         {% if diff % 2 != 0  %}
+           {% for odd_day in odd_days %}
+           <li class="list-group-item"><b>{{odd_day.name}}:</b><span class="badge">{{ odd_day.quantity  }}</span></li>
+           {% endfor %}
+           {% endif %}
+         {% elif diff == 62 or  diff == 63  %}
+           <li class="list-group-item">Сегодня отдых. Пускай мышцы восстановятся.</li>
+
+{# 10-я неделя #}
+       {% elif diff >= 64 and diff < 69  %}
+         {% if diff % 2 == 0  %}
+         {% for job in jobs[9] %}
+           <li class="list-group-item">{{job.name}}: <span class="badge">{{job.body}}</span></li>
+           {% endfor %}
+           {% endif %}
+         {% if diff % 2 != 0  %}
+           {% for odd_day in odd_days %}
+           <li class="list-group-item"><b>{{odd_day.name}}:</b><span class="badge">{{ odd_day.quantity  }}</span></li>
+           {% endfor %}
+           {% endif %}
+         {% elif diff == 69 or  diff == 70  %}
+           <li class="list-group-item">Сегодня отдых. Пускай мышцы восстановятся.</li>
+
+{# Конец программы  #}
+       </ul>
+{% endif %}
+{% if diff >= 1 and diff <= 70 %}
+    </div>
+  </div>
+</div>
+{% endif %}
+</div>
+</div>
+
+<br>
+<div class="row">
+<div class="col-md-6 col-sm-12">
+ <div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" href="#collapse1">Важные моменты:</a>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse in">
+      <ul class="list-group">
+        <li class="list-group-item">1. Делай плавные подтягивания, отжимания, пресс.</li>
+        <li class="list-group-item">2. Перерыв между подходами 1 минута. Не больше.</li>
+        <li class="list-group-item">3. Подходы делай, начиная с большего кол-ва.</li>
+        <li class="list-group-item">4. Разбей упражнения на день.</li>
+      </ul>
+    </div>
+  </div>
+ </div>
+</div>
+<div class="col-md-6 col-sm-12">
+ <div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" href="#collapse2">Подсказки:</a>
+      </h4>
+    </div>
+    <div id="collapse2" class="panel-collapse collapse in">
+      <ul class="list-group">
+        <li class="list-group-item">Если не получается сделать последние подходы на турнике, переключись на брусья - сделай 5-10 раз. Это разгрузит мышцы. И после брусьев доделай подходы. Заметишь легкость.</li>
+      </ul>
+    </div>
+  </div>
+ </div>
+</div>
+ 
+</div>
+
+
+
+<br>
+<div class="row">
+<div class="col-md-6">
+ <div class="progress">
+  <div class="progress-bar progress-bar-striped active" role="progressbar"
+  aria-valuenow="{{ week2*100/70 }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ week2*100/70 }}%">
+    {{ moment(start_job).fromNow(true) }}
+  </div>
+</div> 
+<span style="color:grey">Прошло  {{ week2 }} дней(я) с начала твоей тренировки.</span>
+<span style="color:grey">Разница  {{ diff }}</span>
+<p>Ты начал заниматься {{ moment(start_job).fromNow() }}</p>
+</div>
+</div>
+{% endblock %}
